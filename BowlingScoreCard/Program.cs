@@ -35,7 +35,6 @@ namespace BowlingScoreCard
                 {
                     
                     Console.WriteLine("#{0} Delivery of Frame {1}", frame.Count() + 1, game.Count() + 1);
-                    Console.WriteLine("Current Score: {0}:", CurrentScore(game));
                     Console.Write("Enter score:");
 
                     int delivery = Convert.ToInt32(Console.ReadLine());
@@ -58,6 +57,12 @@ namespace BowlingScoreCard
                         lastFrame = 2;
                         continue;
                     }
+                    else if ((game.Count() == 9) && (frame.Count == 2) && (frame.Sum() < 9))
+                    {
+                        lastFrame = 1;
+                        continue;
+                    }
+
                 }
 
                 game.Add(frame);
@@ -74,6 +79,8 @@ namespace BowlingScoreCard
                         carryOvers = 1;
                     }
                 }
+
+                Console.WriteLine("Current Score: {0}:", CurrentScore(game));                
 
             }
 
