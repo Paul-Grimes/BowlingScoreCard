@@ -81,7 +81,7 @@ namespace BowlingScoreCard
                         lastFrame = 2;
                         continue;
                     }//You did not spare or strike the tenth frame.
-                    else if ((game.Count() == 9) && (frame.Count == 2) && (frame.Sum() < 9))
+                    else if ((game.Count() == 9) && (frame.Count == 2) && (frame.Sum() < 10))
                     {
                         lastFrame = 1;
                         continue;
