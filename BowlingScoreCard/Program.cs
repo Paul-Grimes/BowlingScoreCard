@@ -87,6 +87,8 @@ namespace BowlingScoreCard
                         continue;
                     }
 
+                    Console.WriteLine("Current Score: {0}:", CurrentScore(game) + frame.Sum());
+
                 }
 
                 game.Add(frame);
